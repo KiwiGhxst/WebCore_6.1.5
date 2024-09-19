@@ -1,0 +1,240 @@
+body {
+  font-family: 'TT Lakes';
+  background-color: $darkWhite;
+  margin: 0;
+}
+
+a:active,
+a:hover,
+a:focus,
+a {
+  text-decoration: none;
+  color: $gray;
+}
+
+/* Main Title */
+.main {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+
+  &-title {
+    padding: 0px;
+    display: flex;
+    margin-left: 33px;
+    margin-right: 33px;
+
+    &__list {
+      display: none;
+    }
+
+    &__title {
+      margin-top: 10px;
+      font-size: 28px;
+      line-height: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 40px;
+        width: 4px;
+        left: 0;
+        background-color: $turquoise;
+        border-radius: 0px 10px 10px 0px;
+      }
+    }
+  }
+}
+
+/* Main Navigation */
+.main-nav {
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    height: 40px;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 23px;
+    padding-bottom: 3px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none;
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+    color: $gray;
+    white-space: nowrap;
+    border: 2px transparent solid;
+    border-radius: 6px;
+    padding: 8px;
+
+    &:hover {
+      background-color: $white;
+      border: #B8FFEC 2px solid;
+    }
+  }
+}
+
+/* Main Info */
+.main-info {
+  margin-top: 10px;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 33px;
+    gap: 16px;
+  }
+
+  &__text {
+    display: block;
+    min-width: 270px;
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    margin: 0;
+    padding-right: 20px;
+
+    &-history {
+      display: none;
+      min-width: 270px;
+      max-width: 420px;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      margin: 0;
+      padding-right: 20px;
+    }
+  }
+
+  &__expand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.5001 7.50008L12.0001 10.0001L9.50008 7.50008C9.22393 7.22393 8.77622 7.22393 8.50008 7.50008C8.22393 7.77622 8.22393 8.22393 8.50008 8.50008L11.293 11.293C11.6835 11.6835 12.3167 11.6835 12.7072 11.293L15.5001 8.50008C15.7762 8.22393 15.7762 7.77622 15.5001 7.50008C15.2239 7.22393 14.7762 7.22393 14.5001 7.50008ZM14.5001 13.5001L12.0001 16.0001L9.50008 13.5001C9.22393 13.2239 8.77622 13.2239 8.50008 13.5001C8.22393 13.7762 8.22393 14.2239 8.50008 14.5001L11.293 17.293C11.6835 17.6835 12.3167 17.6835 12.7072 17.293L15.5001 14.5001C15.7762 14.2239 15.7762 13.7762 15.5001 13.5001C15.2239 13.2239 14.7762 13.2239 14.5001 13.5001Z' fill='%2341F6D7'/%3E%3C/svg%3E");
+      margin-top: 5px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__cps-image {
+    margin: 20px;
+    width: 90%;
+    min-width: 288px;
+    max-width: 460px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    max-width: 768px;
+  }
+
+  .hidden {
+    display: flex;
+  }
+
+  .main-info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 32px;
+    gap: 48px;
+
+    &__text {
+      max-width: 768px;
+
+      &-history {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &__cps-image {
+      margin-top: 0px;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+
+  .main {
+    max-width: 1120px;
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 42px;
+      width: 1054px;
+
+      &__list {
+        display: flex;
+        gap: 32px;
+      }
+
+      &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    &-nav__list {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      height: auto;
+      width: 1120px;
+      margin-left: 43px;
+    }
+
+    &-info {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+      width: 1120px;
+
+      &__description {
+        margin-top: 0px;
+      }
+
+      &__text {
+        max-width: 1120px;
+        line-height: 20px;
+
+        &-history {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,8 @@
-import '../scss/style.scss'
+import '../scss/style.scss';
+// import Swiper from './swiper.js'
+import '../js/switchSlider.js';
+import '../js/btnShowMore.js';
+import '../js/sideMenu.js';
 
-console.log('Works!')
+import '../js/sidebarCallback.js';
+import '../js/sidebarFeedback.js';

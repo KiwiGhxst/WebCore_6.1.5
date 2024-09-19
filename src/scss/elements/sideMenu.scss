@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.sideMenu-container {
+  position: fixed;
+  overflow: scroll;
+  flex-direction: column;
+  top: 0px;
+  left: -100%;
+  z-index: 10;
+  background-color: $white;
+  transition: left 0.35s cubic-bezier(0.4, 0, 1, 1);
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'TT Lakes Light';
+  width: 320px;
+  min-height: 100vh;
+  box-shadow: 15px 0 50px rgba(14, 24, 80, 0.2);
+
+  .top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 90px;
+    max-width: 320px;
+    gap: 16px;
+    padding: 18px 24px 0px 24px;
+  }
+  &--active {
+    left: 0;
+    box-shadow: 12px 0px 40px 0px rgba(14, 24, 80, 0.5);
+  }
+}
+
+/* NAVIGATION */
+.nav-list {
+  margin-top: 46px;
+  margin-left: 24px;
+
+  &__sheet {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-left: -24px;
+  }
+
+  &__link {
+    font-size: 16px;
+    margin-left: 24px;
+    color: $black;
+  }
+
+  &__item:hover {
+    color: #353538;
+    transform: scale(1.1) translateX(14px);
+    transition: all 0.15s ease-in-out;
+  }
+
+  &__link::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: -8px;
+    width: 4px;
+    height: 40px;
+    background-color: $turquoise;
+    border-radius: 0px 10px 10px 0px;
+
+  }
+
+  &__link:hover::before,
+  &__link:focus::before {
+    left: 0;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+
+/* Bottom MENU */
+.bottom-menu {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 18px 24px 18px 24px;
+}
+
+/* Contacts */
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+
+  &__email {
+    width: 0;
+    font-size: 16px;
+    color: $black;
+  }
+
+  &__tel {
+    font-family: "TT Lakes Bold";
+    font-size: 24px;
+    color: $black;
+    width: 205px;
+  }
+
+  &__email:hover,
+  &__tel:hover {
+    text-decoration: underline;
+  }
+
+  &__list {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__item input[type=radio] {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__item label {
+    display: inline-block;
+    cursor: pointer;
+    font-family: "TT Lakes Regular";
+    font-size: 16px;
+    color: $black;
+    user-select: none;
+    padding: 5px;
+    border-radius: 15%;
+  }
+
+  &__item input[type=radio]:checked+label {
+    color: $gray;
+    text-decoration: underline;
+  }
+
+  &__item input[type=radio]:focus+label,
+  &__item label:hover {
+    box-shadow: 0 0 5px 5px $turquoise;
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .sideMenu-container {
+    left: 0;
+    position: relative;
+    box-shadow: none;
+
+    .btn_burger_close {
+      display: none;
+    }
+  }
+  .sideMenu {
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .sideMenu-container {
+    width: 320px;
+  }
+}

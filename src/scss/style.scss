@@ -1,17 +1,26 @@
-$bgColor: #24292e;
-$text: #fff;
+@import '/src/scss/base/variables.scss';
+@import '/src/scss/base/fonts.scss';
+@import '/src/scss/base/buttons.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+@import '/src/scss/elements/main/header.scss';
+@import '/src/scss/elements/main/serviceBlock.scss';
+@import '/src/scss/elements/main/swiperBrend.scss';
+@import '/src/scss/elements/main/swiperTech.scss';
+@import '/src/scss/elements/main/pricesTable.scss';
+@import '/src/scss/elements/main/footer.scss';
+
+@import '/src/scss/elements/sideMenu.scss';
+@import '/src/scss/elements/sidebarCallback.scss';
+@import '/src/scss/elements/sidebarFeedback.scss';
+
+@media (min-width: $desktopWidth) {
+  .width-control {
+    display: flex;
+  }
 }
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+.background-grey {
+  background: $darkWhite;
 }

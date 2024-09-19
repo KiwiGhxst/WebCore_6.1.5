@@ -1,0 +1,90 @@
+.hidden {
+  display: none;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 87px;
+  width: 100%;
+  background-color: $white;
+  border-bottom: 1px solid #D9FFF5;
+
+  &-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-left: 16px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 186px;
+      height: 32px;
+      width: 2px;
+      background-color: $lightGrey;
+      margin-top: 10px;
+      animation-fill-mode: none;
+    }
+  }
+
+  &-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-right: 16px;
+  }
+
+  .btn_burger {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='40' height='40' rx='20' fill='%23FF3E79'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 13C11 12.4477 11.4477 12 12 12H28C28.5523 12 29 12.4477 29 13C29 13.5523 28.5523 14 28 14H12C11.4477 14 11 13.5523 11 13ZM11 20C11 19.4477 11.4477 19 12 19H20C20.5523 19 21 19.4477 21 20C21 20.5523 20.5523 21 20 21H12C11.4477 21 11 20.5523 11 20ZM12 26C11.4477 26 11 26.4477 11 27C11 27.5523 11.4477 28 12 28H24C24.5523 28 25 27.5523 25 27C25 26.4477 24.5523 26 24 26H12Z' fill='white'/%3e%3c/svg%3e ");
+  }
+}
+
+@media screen and (min-width: $tabWidth) {
+  .header {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 74px;
+      height: 32px;
+      width: 2px;
+      background-color: $lightGrey;
+      margin-top: 9px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 136px;
+      height: 32px;
+      width: 2px;
+      background-color: $lightGrey;
+      margin-top: 4px;
+    }
+
+    &-menu {
+      .btn_logo {
+        margin-left: 20px;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .btn_profile {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktopWidth) {
+  .header {
+    display: none;
+  }
+}

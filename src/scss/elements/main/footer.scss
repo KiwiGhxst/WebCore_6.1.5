@@ -1,0 +1,27 @@
+.footer {
+  padding: 16px;
+  width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 16px;
+  margin: 0 auto;
+
+  &-info__string {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: $gray;
+    max-width: 330px;
+  }
+}
+
+@media screen and (min-width: $tabWidth) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
