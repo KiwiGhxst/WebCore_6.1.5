@@ -7,20 +7,20 @@ const appWidth = window.innerWidth;
 
 burgerMenu.addEventListener('click', () => {
   dropDown.classList.add('sideMenu--active');
-  headerContainer.style.filter = 'blur(6px)';
-  mainContainer.style.filter = 'blur(6px)';
+  headerContainer.classList.toggle('content-blur');
+  mainContainer.classList.toggle('content-blur');
 });
 
 menuClose.addEventListener('click', () => {
   dropDown.classList.remove('sideMenu--active');
-  headerContainer.style.filter = 'blur(0px)';
-  mainContainer.style.filter = 'blur(0px)';
+  headerContainer.classList.toggle('content-blur');
+  mainContainer.classList.toggle('content-blur');
 });
 
 mainContainer.addEventListener('click', () => {
   if (appWidth < 1440) {
     dropDown.classList.remove('sideMenu--active');
-    headerContainer.style.filter = 'blur(0px)';
-    mainContainer.style.filter = 'blur(0px)';
+    headerContainer.classList.toggle('content-blur');
+    mainContainer.classList.toggle('content-blur');
   }
 });

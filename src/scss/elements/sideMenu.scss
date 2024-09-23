@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+.content-blur {
+  filter: blur(6px);
+}
+
 .sideMenu-container {
   position: fixed;
   overflow: scroll;

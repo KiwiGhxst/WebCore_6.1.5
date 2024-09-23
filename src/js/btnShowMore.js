@@ -1,24 +1,20 @@
-// Brend Const
+const btnShowBrend = document.querySelector('.expander_brend');
+const btnShowTech = document.querySelector('.expander_tech');
 const itemHidden = document.querySelectorAll('.swiper_item__hidden');
 const slideHidden = document.querySelectorAll('.swiper_slide__hidden');
-// Tech Const
-const btnShowBrend = document.getElementById('showMoreBrend');
-const btnShowTech = document.getElementById('showMoreTech');
-
 
 // Brend
-btnShowBrend.addEventListener('click', (event) => {
+btnShowBrend.addEventListener('click', () => {
   itemHidden.forEach(element => 
     element.classList.toggle('swiper_item__hidden')
   );
   
-  if ( event.target.classList.contains('expander_more') ) {
-    event.target.textContent = 'Показать всё';
-    event.target.classList.toggle('expander_more');
+  if ( btnShowBrend.classList.contains('expander_more') ) {
+    btnShowBrend.textContent = 'Показать всё';
   } else {
-    event.target.textContent = 'Скрыть';
-    event.target.classList.toggle('expander_more');
+    btnShowBrend.textContent = 'Скрыть';
   } 
+  btnShowBrend.classList.toggle('expander_more');
 });
 
 // Tech
@@ -27,11 +23,10 @@ btnShowTech.addEventListener('click', (event) => {
     element.classList.toggle('swiper_slide__hidden')
   );
   
-  if ( event.target.classList.contains('expander_more') ) {
-    event.target.textContent = 'Показать всё';
-    event.target.classList.toggle('expander_more');
+  if ( btnShowTech.classList.contains('expander_more') ) {
+    btnShowTech.textContent = 'Показать всё';
   } else {
-    event.target.textContent = 'Скрыть';
-    event.target.classList.toggle('expander_more');
+    btnShowTech.textContent = 'Скрыть';
   } 
+  btnShowTech.classList.toggle('expander_more');
 });
