@@ -196,7 +196,7 @@
                                 </button></div>
                             </div>
                             <div class="swiper-pagination"></div>
-                            <button id="showMoreBrend" class="expander">Показать всё</button>
+                            <button class="expander expander_brend">Показать всё</button>
                         </div>
                     </section>
 
@@ -207,8 +207,8 @@
                             <div class="tech-type-swiper__list swiper-wrapper">
                                 <div class="tech-type-swiper__slide swiper-slide" aria-label="Бренд 1" data-swiper-slide-index="0">
                                     <span class="tech-type-swiper__card-title">Ремонт ноутбуков</span>
-                                    <button class="tech-type-swiper__btn_arrow">
-                                </button></div>
+                                    <button class="tech-type-swiper__btn_arrow"></button>
+                                </div>
                                 <div class="tech-type-swiper__slide swiper-slide" aria-label="Бренд 2" data-swiper-slide-index="1">
                                     <span class="tech-type-swiper__card-title">Ремонт планшетов</span>
                                     <button class="tech-type-swiper__btn_arrow">
@@ -244,7 +244,7 @@
                             </div>
 
                             <div class="swiper-pagination"></div>
-                            <button id="showMoreTech" class="expander">Показать всё</button>
+                            <button class="expander expander_tech">Показать всё</button>
                         </div>
                     </section>
 
@@ -336,7 +336,7 @@
                         <form class="sidebar-call__form">
                             <div class="sidebar-call__form-container">
                                 <div class="sidebar-call__field">
-                                    <input class="phone-input" type="tel" id="tel" placeholder="Телефон">
+                                    <input class="phone-input" name="tel" type="tel" id="tel" required placeholder="Телефон">
                                 </div>
                                 <div class="agreement-block">
                                     <p class="">Нажимая “отправить”, вы даете согласие на
@@ -364,10 +364,10 @@
                         <form class="sidebar-feedback__form">
                             <div class="sidebar-feedback__form-container">
                                 <div class="sidebar-feedback__field">
-                                    <input class="phone-input" type="text" id="tel" placeholder="Имя">
-                                    <input class="phone-input" type="number" id="tel" placeholder="Телефон">
-                                    <input class="phone-input" type="email" id="email" placeholder="Электронная почта">
-                                    <input class="message-input" type="text" id="message" placeholder="Сообщение">
+                                    <input class="phone-input" name="firstName" type="text" id="tel" required placeholder="Имя">
+                                    <input class="phone-input" name="tel" type="number" id="tel" required placeholder="Телефон">
+                                    <input class="phone-input" name="email" type="email" id="email" placeholder="Электронная почта">
+                                    <input class="message-input" name="message" type="text" id="message" placeholder="Сообщение">
                                 </div>
                                 <div class="agreement-block">
                                     <p class="">Нажимая “отправить”, вы даете согласие на
