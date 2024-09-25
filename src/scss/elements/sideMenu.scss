@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: 'TT Lakes Light';
+  font-family: 'TT Lakes';
   width: 320px;
   min-height: 100vh;
   box-shadow: 15px 0 50px rgba(14, 24, 80, 0.2);
@@ -115,7 +115,7 @@
   }
 
   &__tel {
-    font-family: "TT Lakes Bold";
+    font-family: "TT Lakes";
     font-size: 24px;
     color: $black;
     width: 205px;
@@ -145,7 +145,7 @@
   &__item label {
     display: inline-block;
     cursor: pointer;
-    font-family: "TT Lakes Regular";
+    font-family: "TT Lakes";
     font-size: 16px;
     color: $black;
     user-select: none;

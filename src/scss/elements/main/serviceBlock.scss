@@ -241,3 +241,12 @@ a {
     }
   }
 }
+@media (min-width: $desktopWidth) {
+  .width-control {
+    display: flex;
+  }
+}
+
+.background-grey {
+  background: $darkWhite;
+}
